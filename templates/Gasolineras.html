@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b7d39970417d052322ae035c044462a2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div style="position: fixed; 
+                        bottom: 30px; left: 10px;
+                        z-index: 9999;
+                        border:2px solid grey; 
+                        border-radius:5px; 
+                        background-color: white; 
+                        padding: 10px;">
+                <div style="text-align: center;"><h2>Estaciones de servicio</h2></div>
+                <div style="text-align: center;"><h4>a partir del 16 de enero de 2025</h4></div>
+            </div>
+            
+    
+            <div class="folium-map" id="map_b7d39970417d052322ae035c044462a2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b7d39970417d052322ae035c044462a2 = L.map(
+                "map_b7d39970417d052322ae035c044462a2",
+                {
+                    center: [16.997805714639544, -96.81089663240517],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var feature_group_777d7091dd77e281913ae8a03e42927e = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_124ed22083ff3b5fddbb4f97cc5d8ccb = L.marker(
+                [17.313828, -96.505187],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_053f676556eafbb590f19330fa188125 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_124ed22083ff3b5fddbb4f97cc5d8ccb.setIcon(icon_053f676556eafbb590f19330fa188125);
+        
+    
+        var popup_a0bbfa167eb64d71046a9c8327792067 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_97f8166971b02a7c2dad4eaff9b1a432 = $(`<div id="html_97f8166971b02a7c2dad4eaff9b1a432" style="width: 100.0%; height: 100.0%;"><h1>SAARIU</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/23769/EXP/ES/2021</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARRETERA FEDERAL 175, KM 158, LLANO LA CHETA, GUELATAO DE JUAREZ, OAXACA.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.313828,-96.505187'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_a0bbfa167eb64d71046a9c8327792067.setContent(html_97f8166971b02a7c2dad4eaff9b1a432);
+            
+        
+
+        marker_124ed22083ff3b5fddbb4f97cc5d8ccb.bindPopup(popup_a0bbfa167eb64d71046a9c8327792067)
+        ;
+
+        
+    
+    
+            marker_124ed22083ff3b5fddbb4f97cc5d8ccb.bindTooltip(
+                `<div>
+                     SAARIU
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a0e64f525b8b845b2338f12c68a361c = L.marker(
+                [17.815738, -97.7903181],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_b56328a8f71271adfb281f296a46037f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8a0e64f525b8b845b2338f12c68a361c.setIcon(icon_b56328a8f71271adfb281f296a46037f);
+        
+    
+        var popup_7fc24464777e65092ad098e46f3ecccf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aa5682c58fee5220c0f5c3e01b9aaa0a = $(`<div id="html_aa5682c58fee5220c0f5c3e01b9aaa0a" style="width: 100.0%; height: 100.0%;"><h1>COMBUSTIBLES DE HUAJUAPAN SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/1594/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>2 DE ABRIL No. 202, COL. MILITAR (SALIDA A MEXICO)</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.815738,-97.7903181'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_7fc24464777e65092ad098e46f3ecccf.setContent(html_aa5682c58fee5220c0f5c3e01b9aaa0a);
+            
+        
+
+        marker_8a0e64f525b8b845b2338f12c68a361c.bindPopup(popup_7fc24464777e65092ad098e46f3ecccf)
+        ;
+
+        
+    
+    
+            marker_8a0e64f525b8b845b2338f12c68a361c.bindTooltip(
+                `<div>
+                     COMBUSTIBLES DE HUAJUAPAN SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3fbcdc2d21dd74b5ebd7d03889faf88a = L.marker(
+                [17.8028781, -97.7590226],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_888899f772c2621ce7cc2ab4367a4113 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3fbcdc2d21dd74b5ebd7d03889faf88a.setIcon(icon_888899f772c2621ce7cc2ab4367a4113);
+        
+    
+        var popup_bac91ff63ce7e8b6e9cb841333bb4f43 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_48a520178d9c7f8a3ab6eb4a1bc36b9f = $(`<div id="html_48a520178d9c7f8a3ab6eb4a1bc36b9f" style="width: 100.0%; height: 100.0%;"><h1>COMBUSTIBLES DE HUAJUAPAN SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/1788/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. INTERNACIONAL A OAXACA NO. 132 (JUNTO A LA NISSAN)</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.8028781,-97.7590226'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_bac91ff63ce7e8b6e9cb841333bb4f43.setContent(html_48a520178d9c7f8a3ab6eb4a1bc36b9f);
+            
+        
+
+        marker_3fbcdc2d21dd74b5ebd7d03889faf88a.bindPopup(popup_bac91ff63ce7e8b6e9cb841333bb4f43)
+        ;
+
+        
+    
+    
+            marker_3fbcdc2d21dd74b5ebd7d03889faf88a.bindTooltip(
+                `<div>
+                     COMBUSTIBLES DE HUAJUAPAN SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_596f9260fce4d093dcaef2c38142696a = L.marker(
+                [17.7893456, -97.7860265],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_a969f58a982c6936ac2fc52f4a06e1ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_596f9260fce4d093dcaef2c38142696a.setIcon(icon_a969f58a982c6936ac2fc52f4a06e1ed);
+        
+    
+        var popup_da1ffebe133cea58ab0b0d772ce164c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4d5b3e7335fbd1b2809a128f42c42fad = $(`<div id="html_4d5b3e7335fbd1b2809a128f42c42fad" style="width: 100.0%; height: 100.0%;"><h1>COMBUSTIBLES DE HUAJUAPAN SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/2091/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>BLV. TIERRA DEL SOL No. 232, AGENCIA LAS ANIMAS (RUMBO A JUXTLAHUACA)</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.7893456,-97.7860265'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_da1ffebe133cea58ab0b0d772ce164c8.setContent(html_4d5b3e7335fbd1b2809a128f42c42fad);
+            
+        
+
+        marker_596f9260fce4d093dcaef2c38142696a.bindPopup(popup_da1ffebe133cea58ab0b0d772ce164c8)
+        ;
+
+        
+    
+    
+            marker_596f9260fce4d093dcaef2c38142696a.bindTooltip(
+                `<div>
+                     COMBUSTIBLES DE HUAJUAPAN SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d2ebde60e8302747ff8a90e310a33896 = L.marker(
+                [17.8255503, -97.743441],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_a535ec1c7f075e082fc9e381acc16063 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d2ebde60e8302747ff8a90e310a33896.setIcon(icon_a535ec1c7f075e082fc9e381acc16063);
+        
+    
+        var popup_bfc1a177aa02577878c3ef85d750083a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dc39c9360ac9b0df86cc0b626624aa37 = $(`<div id="html_dc39c9360ac9b0df86cc0b626624aa37" style="width: 100.0%; height: 100.0%;"><h1>COMBUSTIBLES DE HUAJUAPAN SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/2131/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. INTERNACIONAL HUAJUAPÁN-TEHUACAN, CORAZON DE JESUS, LA JUNTA (CERCA DE LA COCA)</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.8255503,-97.743441'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_bfc1a177aa02577878c3ef85d750083a.setContent(html_dc39c9360ac9b0df86cc0b626624aa37);
+            
+        
+
+        marker_d2ebde60e8302747ff8a90e310a33896.bindPopup(popup_bfc1a177aa02577878c3ef85d750083a)
+        ;
+
+        
+    
+    
+            marker_d2ebde60e8302747ff8a90e310a33896.bindTooltip(
+                `<div>
+                     COMBUSTIBLES DE HUAJUAPAN SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c60ed5211c37f20eeb7600ee347f6c98 = L.marker(
+                [18.1262105, -96.8355349],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_9b06f91cbe0a4f1966b144ae248b56a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c60ed5211c37f20eeb7600ee347f6c98.setIcon(icon_9b06f91cbe0a4f1966b144ae248b56a0);
+        
+    
+        var popup_6b3f61b61e9612bdf97d73c84d606875 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_04a63d2bd279b8d374aa673f405443e9 = $(`<div id="html_04a63d2bd279b8d374aa673f405443e9" style="width: 100.0%; height: 100.0%;"><h1>SUPER SERVICIO HUAUTLA SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/3636/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. HUAUTLA-JALAPA DE DIAZ KM 0+240, 105 COL. CENTRO, HUAUTLA DE JIMENEZ, OAXACA. CP 68500</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'18.1262105,-96.8355349'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_6b3f61b61e9612bdf97d73c84d606875.setContent(html_04a63d2bd279b8d374aa673f405443e9);
+            
+        
+
+        marker_c60ed5211c37f20eeb7600ee347f6c98.bindPopup(popup_6b3f61b61e9612bdf97d73c84d606875)
+        ;
+
+        
+    
+    
+            marker_c60ed5211c37f20eeb7600ee347f6c98.bindTooltip(
+                `<div>
+                     SUPER SERVICIO HUAUTLA SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_10dbc05028f774fdcee6fdb350f328fd = L.marker(
+                [16.548014, -95.0875398],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_6c7820b6053b7bc3d8d823fda62db25b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_10dbc05028f774fdcee6fdb350f328fd.setIcon(icon_6c7820b6053b7bc3d8d823fda62db25b);
+        
+    
+        var popup_7a0a4b2e0cf583b8f4c6efe021e37caa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6e1e55ad4ed44c63008cdccdc9736fad = $(`<div id="html_6e1e55ad4ed44c63008cdccdc9736fad" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERAS R Y R DE IXTEPEC SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/5779/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CALZADA JOAQUIN AMARO No. 34, COL. MODERNA, CIUDAD IXTEPEC, OAXACA CP 70110</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.548014,-95.0875398'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_7a0a4b2e0cf583b8f4c6efe021e37caa.setContent(html_6e1e55ad4ed44c63008cdccdc9736fad);
+            
+        
+
+        marker_10dbc05028f774fdcee6fdb350f328fd.bindPopup(popup_7a0a4b2e0cf583b8f4c6efe021e37caa)
+        ;
+
+        
+    
+    
+            marker_10dbc05028f774fdcee6fdb350f328fd.bindTooltip(
+                `<div>
+                     GASOLINERAS R Y R DE IXTEPEC SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1eeabd51f87233c56614ff19e08ee68 = L.marker(
+                [17.005077, -97.906423],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_5d85389b2eb5b9c72c6b15fd49b692c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a1eeabd51f87233c56614ff19e08ee68.setIcon(icon_5d85389b2eb5b9c72c6b15fd49b692c3);
+        
+    
+        var popup_7562998334503d09c51d2d31da06e920 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_81ab8ba3721fd6fb424e298fd6080ac7 = $(`<div id="html_81ab8ba3721fd6fb424e298fd6080ac7" style="width: 100.0%; height: 100.0%;"><h1>SERVICIO FERNANDEZ HNOS. SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/8263/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. PÉREZ GASGA KM 147+400 S/N, MALPICA, PUTLA DE GUERRERO.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.005077,-97.906423'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_7562998334503d09c51d2d31da06e920.setContent(html_81ab8ba3721fd6fb424e298fd6080ac7);
+            
+        
+
+        marker_a1eeabd51f87233c56614ff19e08ee68.bindPopup(popup_7562998334503d09c51d2d31da06e920)
+        ;
+
+        
+    
+    
+            marker_a1eeabd51f87233c56614ff19e08ee68.bindTooltip(
+                `<div>
+                     SERVICIO FERNANDEZ HNOS. SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_679e4f577467a90a0ec72e6976a95741 = L.marker(
+                [16.8930116, -95.0122105],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_6b3da8aa4c52094b2db0ca7a7c7af720 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_679e4f577467a90a0ec72e6976a95741.setIcon(icon_6b3da8aa4c52094b2db0ca7a7c7af720);
+        
+    
+        var popup_26912a51c61e3b35b3e24c70e919e40a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_70fa9ef1e2de7e12ca0e63379b9f54b5 = $(`<div id="html_70fa9ef1e2de7e12ca0e63379b9f54b5" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERA INTEGRAL SAN IGNACIO SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/3516/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. TRANSÍSTMICA KM 196+400, MATIAS ROMERO, OAXACA, CP 70300</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.8930116,-95.0122105'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_26912a51c61e3b35b3e24c70e919e40a.setContent(html_70fa9ef1e2de7e12ca0e63379b9f54b5);
+            
+        
+
+        marker_679e4f577467a90a0ec72e6976a95741.bindPopup(popup_26912a51c61e3b35b3e24c70e919e40a)
+        ;
+
+        
+    
+    
+            marker_679e4f577467a90a0ec72e6976a95741.bindTooltip(
+                `<div>
+                     GASOLINERA INTEGRAL SAN IGNACIO SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ddf4954c93cb40cc67db8f25f6f2bdcc = L.marker(
+                [16.3405118, -96.5999716],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_04c6e81525743cb019c9e0e2d69e9084 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ddf4954c93cb40cc67db8f25f6f2bdcc.setIcon(icon_04c6e81525743cb019c9e0e2d69e9084);
+        
+    
+        var popup_931a741fdd51c7d5d362d79b55443fa1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a73db25dc9feed0a831504b8b7a4c6c7 = $(`<div id="html_a73db25dc9feed0a831504b8b7a4c6c7" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERA VALLE DEL SUR SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/3316/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. OAXACA-PUERTO ANGEL KM 100, MIAHUATLAN DE PORFIRIO DIAZ, OAXACA, CP 70800</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.3405118,-96.5999716'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_931a741fdd51c7d5d362d79b55443fa1.setContent(html_a73db25dc9feed0a831504b8b7a4c6c7);
+            
+        
+
+        marker_ddf4954c93cb40cc67db8f25f6f2bdcc.bindPopup(popup_931a741fdd51c7d5d362d79b55443fa1)
+        ;
+
+        
+    
+    
+            marker_ddf4954c93cb40cc67db8f25f6f2bdcc.bindTooltip(
+                `<div>
+                     GASOLINERA VALLE DEL SUR SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba7a509b40ae16996bf890018c0d0e62 = L.marker(
+                [16.5622001, -96.0206652],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_19edabce2936be88c0aa29938be34e38 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ba7a509b40ae16996bf890018c0d0e62.setIcon(icon_19edabce2936be88c0aa29938be34e38);
+        
+    
+        var popup_e9a0ebc5e86ee9845ce65fdc277a786a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1951d6addaf1ca46d477f776085e7375 = $(`<div id="html_1951d6addaf1ca46d477f776085e7375" style="width: 100.0%; height: 100.0%;"><h1>DAVID SANCHEZ NOLASCO</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/20000/EXP/ES/2017</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. OAXACA-TEHUANTEPEC KM 135+07, COL. CENTRO NEJAPA DE MADERO, EL CAMARON, OAXACA.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.5622001,-96.0206652'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_e9a0ebc5e86ee9845ce65fdc277a786a.setContent(html_1951d6addaf1ca46d477f776085e7375);
+            
+        
+
+        marker_ba7a509b40ae16996bf890018c0d0e62.bindPopup(popup_e9a0ebc5e86ee9845ce65fdc277a786a)
+        ;
+
+        
+    
+    
+            marker_ba7a509b40ae16996bf890018c0d0e62.bindTooltip(
+                `<div>
+                     DAVID SANCHEZ NOLASCO
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad6127c7bd961b43718a0efa528f2b7d = L.marker(
+                [17.4602092, -97.2311996],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_c66db44e4bcf89ac46aaf275380d692a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ad6127c7bd961b43718a0efa528f2b7d.setIcon(icon_c66db44e4bcf89ac46aaf275380d692a);
+        
+    
+        var popup_09c42608a4447ada940e6cb26d306832 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66c05663baf87adfaf36a698bc71e1e8 = $(`<div id="html_66c05663baf87adfaf36a698bc71e1e8" style="width: 100.0%; height: 100.0%;"><h1>CRICSA COMBUSTIBLES SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/2641/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. INTERNACIONAL KM 440, COL. CENTRO, NOCHIXTLAN</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.4602092,-97.2311996'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_09c42608a4447ada940e6cb26d306832.setContent(html_66c05663baf87adfaf36a698bc71e1e8);
+            
+        
+
+        marker_ad6127c7bd961b43718a0efa528f2b7d.bindPopup(popup_09c42608a4447ada940e6cb26d306832)
+        ;
+
+        
+    
+    
+            marker_ad6127c7bd961b43718a0efa528f2b7d.bindTooltip(
+                `<div>
+                     CRICSA COMBUSTIBLES SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c8e737783a0bdff04bcce7c038b3d1cb = L.marker(
+                [17.0357673, -96.7151946],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_3cf56a8de2962a5ae885a78e4e77c360 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c8e737783a0bdff04bcce7c038b3d1cb.setIcon(icon_3cf56a8de2962a5ae885a78e4e77c360);
+        
+    
+        var popup_5ebbd52ab82ed8967167f41bb2d8be3f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6b652cf08d05dd568ee292c399d8d050 = $(`<div id="html_6b652cf08d05dd568ee292c399d8d050" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERA LOR CAST SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/23025/EXP/ES/2019</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>SIMBOLOS PATRIOS #361, COL EXHACIENDA CANDIANI</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.0357673,-96.7151946'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_5ebbd52ab82ed8967167f41bb2d8be3f.setContent(html_6b652cf08d05dd568ee292c399d8d050);
+            
+        
+
+        marker_c8e737783a0bdff04bcce7c038b3d1cb.bindPopup(popup_5ebbd52ab82ed8967167f41bb2d8be3f)
+        ;
+
+        
+    
+    
+            marker_c8e737783a0bdff04bcce7c038b3d1cb.bindTooltip(
+                `<div>
+                     GASOLINERA LOR CAST SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7efe5dcd73865624291ae1d15f54622f = L.marker(
+                [17.023901, -96.733356],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_431b995709e2c8db55dc5dd821f931c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7efe5dcd73865624291ae1d15f54622f.setIcon(icon_431b995709e2c8db55dc5dd821f931c2);
+        
+    
+        var popup_fd1dbdb71cd5b81fcab6c26fa44e61e6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5393c1495be3ccb0871d2d6a00ce46b5 = $(`<div id="html_5393c1495be3ccb0871d2d6a00ce46b5" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERA LOR CAST SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/23933/EXP/ES/2022</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CALLE PROGRESO #1000 ESQ. SANTA CRUZ XOXOCOTLAN, OAXACA</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.023901,-96.733356'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_fd1dbdb71cd5b81fcab6c26fa44e61e6.setContent(html_5393c1495be3ccb0871d2d6a00ce46b5);
+            
+        
+
+        marker_7efe5dcd73865624291ae1d15f54622f.bindPopup(popup_fd1dbdb71cd5b81fcab6c26fa44e61e6)
+        ;
+
+        
+    
+    
+            marker_7efe5dcd73865624291ae1d15f54622f.bindTooltip(
+                `<div>
+                     GASOLINERA LOR CAST SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9a688b3372a33127a047e25b0a7d5b4f = L.marker(
+                [17.017922, -96.71166],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_cce7b48f1872a10709ee3a179cd706da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9a688b3372a33127a047e25b0a7d5b4f.setIcon(icon_cce7b48f1872a10709ee3a179cd706da);
+        
+    
+        var popup_1569a3d62fa686ad6f8e7c8b6ef3efd3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b431d1fbfe518750cf672891ef35c0a7 = $(`<div id="html_b431d1fbfe518750cf672891ef35c0a7" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERA LOR CAST SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/25256/EXP/ES/2023</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>AV. SIMBOLOS PATRIOS No. 100, COL. PARAJE EL SABINO, SAN AGUSTIN DE LAS JUNTAS, OAXACA.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.017922,-96.71166'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_1569a3d62fa686ad6f8e7c8b6ef3efd3.setContent(html_b431d1fbfe518750cf672891ef35c0a7);
+            
+        
+
+        marker_9a688b3372a33127a047e25b0a7d5b4f.bindPopup(popup_1569a3d62fa686ad6f8e7c8b6ef3efd3)
+        ;
+
+        
+    
+    
+            marker_9a688b3372a33127a047e25b0a7d5b4f.bindTooltip(
+                `<div>
+                     GASOLINERA LOR CAST SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b5899031c3c1ef3b4e0975b29dae0c9 = L.marker(
+                [17.0531247, -96.7179888],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_6658397734b42d99b2a0fb3c3581fbe7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0b5899031c3c1ef3b4e0975b29dae0c9.setIcon(icon_6658397734b42d99b2a0fb3c3581fbe7);
+        
+    
+        var popup_aab3df7fd7e9a5835b5b1382deabb784 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f150212fedc5d4e15ce7e1cdeb8955bf = $(`<div id="html_f150212fedc5d4e15ce7e1cdeb8955bf" style="width: 100.0%; height: 100.0%;"><h1>COMPAÑÍA GASOEXACTO SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/23621/EXP/ES/2020</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>AV. EDUARDO MATA N0. 1413, COL. CENTRO, OAXACA DE JUAREZ, OAX.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.0531247,-96.7179888'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_aab3df7fd7e9a5835b5b1382deabb784.setContent(html_f150212fedc5d4e15ce7e1cdeb8955bf);
+            
+        
+
+        marker_0b5899031c3c1ef3b4e0975b29dae0c9.bindPopup(popup_aab3df7fd7e9a5835b5b1382deabb784)
+        ;
+
+        
+    
+    
+            marker_0b5899031c3c1ef3b4e0975b29dae0c9.bindTooltip(
+                `<div>
+                     COMPAÑÍA GASOEXACTO SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d6736afd76f3e9293e553c86b85f4f53 = L.marker(
+                [17.088455, -96.746493],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_0b578a7d46da18327d7c08e25e826d77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d6736afd76f3e9293e553c86b85f4f53.setIcon(icon_0b578a7d46da18327d7c08e25e826d77);
+        
+    
+        var popup_de26cc390117e01f95f1c4840429f51f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1cbbc896df0c923b485316f3bdb4f665 = $(`<div id="html_1cbbc896df0c923b485316f3bdb4f665" style="width: 100.0%; height: 100.0%;"><h1>COMPAÑÍA GASOEXACTO SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/25445/EXP/ES/2023</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. INTER. #259 SANTA ROSA, OAXACA, CP 68035</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.088455,-96.746493'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_de26cc390117e01f95f1c4840429f51f.setContent(html_1cbbc896df0c923b485316f3bdb4f665);
+            
+        
+
+        marker_d6736afd76f3e9293e553c86b85f4f53.bindPopup(popup_de26cc390117e01f95f1c4840429f51f)
+        ;
+
+        
+    
+    
+            marker_d6736afd76f3e9293e553c86b85f4f53.bindTooltip(
+                `<div>
+                     COMPAÑÍA GASOEXACTO SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f6570ae3b0db60862c9006f56d8ad186 = L.marker(
+                [15.86422, -97.07224],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_20a1d6fb85018fe6542f839fe8542d32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f6570ae3b0db60862c9006f56d8ad186.setIcon(icon_20a1d6fb85018fe6542f839fe8542d32);
+        
+    
+        var popup_74bca756eb73f522c41867e6f8d05808 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ecf92bd583e1c4f5841757056516df3a = $(`<div id="html_ecf92bd583e1c4f5841757056516df3a" style="width: 100.0%; height: 100.0%;"><h1>ESTACION DE SERVICIO SAN ANTONIO SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/5666/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>3ª NORTE 401 SECTOR JUAREZ SN, CENTRO, PUERTO ESCONDIDO, OAXACA. CP 71980</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'15.86422,-97.07224'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_74bca756eb73f522c41867e6f8d05808.setContent(html_ecf92bd583e1c4f5841757056516df3a);
+            
+        
+
+        marker_f6570ae3b0db60862c9006f56d8ad186.bindPopup(popup_74bca756eb73f522c41867e6f8d05808)
+        ;
+
+        
+    
+    
+            marker_f6570ae3b0db60862c9006f56d8ad186.bindTooltip(
+                `<div>
+                     ESTACION DE SERVICIO SAN ANTONIO SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d8e7b4da054366e14dd81e38a23f2d3 = L.marker(
+                [16.23994603078951, -97.28199002337732],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_f2a80ade5fe87f69731750b51234ae94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3d8e7b4da054366e14dd81e38a23f2d3.setIcon(icon_f2a80ade5fe87f69731750b51234ae94);
+        
+    
+        var popup_e47642caddcb35e1f97d795f381431bb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_46bc0a4d6077bfa472362d225f223071 = $(`<div id="html_46bc0a4d6077bfa472362d225f223071" style="width: 100.0%; height: 100.0%;"><h1>DEL CARMEN COMBUSTIBLES Y SERVICIOS DE JUQUILA SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/12771/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CAMINO A SOLA DE VEGA KM. 0.001 SANTA CATARINA JUQUILA</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.23994603078951,-97.28199002337732'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_e47642caddcb35e1f97d795f381431bb.setContent(html_46bc0a4d6077bfa472362d225f223071);
+            
+        
+
+        marker_3d8e7b4da054366e14dd81e38a23f2d3.bindPopup(popup_e47642caddcb35e1f97d795f381431bb)
+        ;
+
+        
+    
+    
+            marker_3d8e7b4da054366e14dd81e38a23f2d3.bindTooltip(
+                `<div>
+                     DEL CARMEN COMBUSTIBLES Y SERVICIOS DE JUQUILA SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3be621514c02bbc0bc92c04f31b13497 = L.marker(
+                [15.767482988141383, -96.25794752325788],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_b0935d2fb75ab4cf4e9557df7941499d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3be621514c02bbc0bc92c04f31b13497.setIcon(icon_b0935d2fb75ab4cf4e9557df7941499d);
+        
+    
+        var popup_018d57a463ab15d01506227c20dca9cf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9268e5f62411292d3840a049fae2c38f = $(`<div id="html_9268e5f62411292d3840a049fae2c38f" style="width: 100.0%; height: 100.0%;"><h1>DESARROLLO HUATULCO SC</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/4823/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. COSTERA TRAMO POCHUTLA-SALINA CRUZ, AGUAJE EL ZAPOTE, STA. MA. HUATULCO.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'15.767482988141383,-96.25794752325788'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_018d57a463ab15d01506227c20dca9cf.setContent(html_9268e5f62411292d3840a049fae2c38f);
+            
+        
+
+        marker_3be621514c02bbc0bc92c04f31b13497.bindPopup(popup_018d57a463ab15d01506227c20dca9cf)
+        ;
+
+        
+    
+    
+            marker_3be621514c02bbc0bc92c04f31b13497.bindTooltip(
+                `<div>
+                     DESARROLLO HUATULCO SC
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d36c107cc83ac31baa334df1fa99e6d7 = L.marker(
+                [16.28225, -97.82909],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_d1cbee9ac9c5c0b3055ba769aabf2d9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d36c107cc83ac31baa334df1fa99e6d7.setIcon(icon_d1cbee9ac9c5c0b3055ba769aabf2d9e);
+        
+    
+        var popup_5e2406f04d2e263bef1d24e43f2ce0dd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd4fd4ad142b37246dfd1965e048ff2b = $(`<div id="html_cd4fd4ad142b37246dfd1965e048ff2b" style="width: 100.0%; height: 100.0%;"><h1>SERVICIO CIMOVI SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/4958/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. PINOTEPA NACIONAL-JAMILTEPEC KM. 30+200 No. 710, SANTIAGO JAMILTEPEC, OAXACA</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.28225,-97.82909'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_5e2406f04d2e263bef1d24e43f2ce0dd.setContent(html_cd4fd4ad142b37246dfd1965e048ff2b);
+            
+        
+
+        marker_d36c107cc83ac31baa334df1fa99e6d7.bindPopup(popup_5e2406f04d2e263bef1d24e43f2ce0dd)
+        ;
+
+        
+    
+    
+            marker_d36c107cc83ac31baa334df1fa99e6d7.bindTooltip(
+                `<div>
+                     SERVICIO CIMOVI SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9a0ea4fea924994c11b7fd2d4cf4d93a = L.marker(
+                [16.349049652612056, -98.04961061433904],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_41b82873c7c845c3fb9feaf0b9ac316d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9a0ea4fea924994c11b7fd2d4cf4d93a.setIcon(icon_41b82873c7c845c3fb9feaf0b9ac316d);
+        
+    
+        var popup_866fb45305fac3705ff1fc753b48621a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7249b9d9a8289d80e95e2c285597d7bb = $(`<div id="html_7249b9d9a8289d80e95e2c285597d7bb" style="width: 100.0%; height: 100.0%;"><h1>ESTACION DE SERVICIO SAN ANTONIO SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/4239/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARRETERA LIBRAMIENTO S/N SECCION SEGUNDA CP 71600</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.349049652612056,-98.04961061433904'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_866fb45305fac3705ff1fc753b48621a.setContent(html_7249b9d9a8289d80e95e2c285597d7bb);
+            
+        
+
+        marker_9a0ea4fea924994c11b7fd2d4cf4d93a.bindPopup(popup_866fb45305fac3705ff1fc753b48621a)
+        ;
+
+        
+    
+    
+            marker_9a0ea4fea924994c11b7fd2d4cf4d93a.bindTooltip(
+                `<div>
+                     ESTACION DE SERVICIO SAN ANTONIO SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53f452fa72e7afbe9462fbafe8dbfa08 = L.marker(
+                [16.32373, -95.24003],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_b02aac015f022d44039935a6033e9911 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_53f452fa72e7afbe9462fbafe8dbfa08.setIcon(icon_b02aac015f022d44039935a6033e9911);
+        
+    
+        var popup_0038cdef928f066164aa649887f5d7eb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9063d51a387d7156917c12a116b5607c = $(`<div id="html_9063d51a387d7156917c12a116b5607c" style="width: 100.0%; height: 100.0%;"><h1>SERVICASGAR DEL ISTMO SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/3853/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. PANAMERICANA. S/N BO. STA. MA. STO. DOMINGO TEHUANTEPEC</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'16.32373,-95.24003'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_0038cdef928f066164aa649887f5d7eb.setContent(html_9063d51a387d7156917c12a116b5607c);
+            
+        
+
+        marker_53f452fa72e7afbe9462fbafe8dbfa08.bindPopup(popup_0038cdef928f066164aa649887f5d7eb)
+        ;
+
+        
+    
+    
+            marker_53f452fa72e7afbe9462fbafe8dbfa08.bindTooltip(
+                `<div>
+                     SERVICASGAR DEL ISTMO SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bb206dca5739b09c9fed39dbf907d260 = L.marker(
+                [17.50683963129639, -97.4829994027009],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_8f6861aa98dda14dcf4c2ac85bb4c9d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bb206dca5739b09c9fed39dbf907d260.setIcon(icon_8f6861aa98dda14dcf4c2ac85bb4c9d5);
+        
+    
+        var popup_9c0b37fdf135a870c83406a4e8e38882 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30c3000b1bdbe39ee453865dfc85f64c = $(`<div id="html_30c3000b1bdbe39ee453865dfc85f64c" style="width: 100.0%; height: 100.0%;"><h1>PETROMIXTECAS</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/13121/EXP/ES/2016</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. PEREZ GASGA KM 12.5 S/N SAN PEDRO Y SAN PABLO TEPOSCOLULA</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.50683963129639,-97.4829994027009'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_9c0b37fdf135a870c83406a4e8e38882.setContent(html_30c3000b1bdbe39ee453865dfc85f64c);
+            
+        
+
+        marker_bb206dca5739b09c9fed39dbf907d260.bindPopup(popup_9c0b37fdf135a870c83406a4e8e38882)
+        ;
+
+        
+    
+    
+            marker_bb206dca5739b09c9fed39dbf907d260.bindTooltip(
+                `<div>
+                     PETROMIXTECAS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_577c4e92552290180502951fa450b9ba = L.marker(
+                [15.71620561424131, -96.58351811805596],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_058d71c51989c4e5e6b92ad73c1d17dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_577c4e92552290180502951fa450b9ba.setIcon(icon_058d71c51989c4e5e6b92ad73c1d17dd);
+        
+    
+        var popup_86ac7ae7766b82e649a6b3bf7fb044e5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_502df77e5056e0cb257a67c03d3b0ea2 = $(`<div id="html_502df77e5056e0cb257a67c03d3b0ea2" style="width: 100.0%; height: 100.0%;"><h1>SERVICIO CIMOGUA SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/4813/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>CARR. FEDERAL COSTERA DEL PACIFICO TRAMO PTO. ESCONDIDO-POCHUTLA KM 201 No. 02, SAN ANTONIO TONAMECA, OAXACA</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'15.71620561424131,-96.58351811805596'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_86ac7ae7766b82e649a6b3bf7fb044e5.setContent(html_502df77e5056e0cb257a67c03d3b0ea2);
+            
+        
+
+        marker_577c4e92552290180502951fa450b9ba.bindPopup(popup_86ac7ae7766b82e649a6b3bf7fb044e5)
+        ;
+
+        
+    
+    
+            marker_577c4e92552290180502951fa450b9ba.bindTooltip(
+                `<div>
+                     SERVICIO CIMOGUA SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac6bd3972e08be283bc3cf730a961cfd = L.marker(
+                [18.04031939443084, -96.16319278140372],
+                {}
+            ).addTo(feature_group_777d7091dd77e281913ae8a03e42927e);
+        
+    
+            var icon_60e7a9a70fb42d6bc3ddfdd52093e99c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ac6bd3972e08be283bc3cf730a961cfd.setIcon(icon_60e7a9a70fb42d6bc3ddfdd52093e99c);
+        
+    
+        var popup_fc1016a98b8306eb317e9c4008aae463 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_451a861869e180e945eb575303d2e0da = $(`<div id="html_451a861869e180e945eb575303d2e0da" style="width: 100.0%; height: 100.0%;"><h1>SERVICIO SEBASTOPOL SA DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/3448/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>BLV. BENITO JUAREZ 1 COL. COSTA VERDE SAN JUAN BAUTISTA TUXTEPEC</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>ACTIVA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'18.04031939443084,-96.16319278140372'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_fc1016a98b8306eb317e9c4008aae463.setContent(html_451a861869e180e945eb575303d2e0da);
+            
+        
+
+        marker_ac6bd3972e08be283bc3cf730a961cfd.bindPopup(popup_fc1016a98b8306eb317e9c4008aae463)
+        ;
+
+        
+    
+    
+            marker_ac6bd3972e08be283bc3cf730a961cfd.bindTooltip(
+                `<div>
+                     SERVICIO SEBASTOPOL SA DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_777d7091dd77e281913ae8a03e42927e.addTo(map_b7d39970417d052322ae035c044462a2);
+        
+    
+            var feature_group_11a2d845620a47e9302c0633e43bb566 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_df78cb24729aa0453f1efad4a988e442 = L.marker(
+                [17.05369671531921, -96.71365557874654],
+                {}
+            ).addTo(feature_group_11a2d845620a47e9302c0633e43bb566);
+        
+    
+            var icon_31ed3298ca40670edc466ef6103811a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_df78cb24729aa0453f1efad4a988e442.setIcon(icon_31ed3298ca40670edc466ef6103811a9);
+        
+    
+        var popup_02e249f1b2a7faf2086e3918053c57ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eebe2c21758a0b155ae044335731a686 = $(`<div id="html_eebe2c21758a0b155ae044335731a686" style="width: 100.0%; height: 100.0%;"><h1>SERVICIO CASTE SA</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/3889/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>PERIFERICO ESQ. AV UNIVERSIDAD S/N, 5 SEÑORES, OAXACA.</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>SUSPENDIDA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'17.05369671531921,-96.71365557874654'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_02e249f1b2a7faf2086e3918053c57ac.setContent(html_eebe2c21758a0b155ae044335731a686);
+            
+        
+
+        marker_df78cb24729aa0453f1efad4a988e442.bindPopup(popup_02e249f1b2a7faf2086e3918053c57ac)
+        ;
+
+        
+    
+    
+            marker_df78cb24729aa0453f1efad4a988e442.bindTooltip(
+                `<div>
+                     SERVICIO CASTE SA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_251cebe4413a827a857008484a553cb7 = L.marker(
+                [18.09307578307657, -96.12859946546396],
+                {}
+            ).addTo(feature_group_11a2d845620a47e9302c0633e43bb566);
+        
+    
+            var icon_c5f80f44058a9f4b37aa5681b78cd199 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_251cebe4413a827a857008484a553cb7.setIcon(icon_c5f80f44058a9f4b37aa5681b78cd199);
+        
+    
+        var popup_076e739edfdb72bb3451340f3a1c87cc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_91d39ce88d06b25e57bfcca89661233d = $(`<div id="html_91d39ce88d06b25e57bfcca89661233d" style="width: 100.0%; height: 100.0%;"><h1>GASOLINERIA COSTA VERDE S DE RL DE CV</h1>                                          <h4>                                          <table>                                             <tr>                                                 <td>Estación:</td>                                                 <td><strong>PL/7266/EXP/ES/2015</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Dirección:</td>                                                 <td>BLVD. BENITO JUAREZ 1 COL. COSTA VERDE SAN JUAN BAUTISTA TUXTEPEC CP 68310</td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Situación:</td>                                                                                                 <td><strong>SUSPENDIDA</strong></td>                                             </tr>                                             <tr height="15px"></tr>                                             <tr>                                                 <td>Cómo llegar:</td>                                                 <td><a href="https://www.google.com/maps/dir/'Tu ubicación'/'18.09307578307657,-96.12859946546396'" target="_blank">Ver en Google Maps</a></td>                                             </tr>                                         </table></h4></div>`)[0];
+                popup_076e739edfdb72bb3451340f3a1c87cc.setContent(html_91d39ce88d06b25e57bfcca89661233d);
+            
+        
+
+        marker_251cebe4413a827a857008484a553cb7.bindPopup(popup_076e739edfdb72bb3451340f3a1c87cc)
+        ;
+
+        
+    
+    
+            marker_251cebe4413a827a857008484a553cb7.bindTooltip(
+                `<div>
+                     GASOLINERIA COSTA VERDE S DE RL DE CV
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_11a2d845620a47e9302c0633e43bb566.addTo(map_b7d39970417d052322ae035c044462a2);
+        
+    
+            var tile_layer_be789b0815a03d52143792df33e98445 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_be789b0815a03d52143792df33e98445.addTo(map_b7d39970417d052322ae035c044462a2);
+        
+    
+            var layer_control_ce617b722a9c0d297db1472229a2b003_layers = {
+                base_layers : {
+                },
+                overlays :  {
+                    "Gasolineras Activas" : feature_group_777d7091dd77e281913ae8a03e42927e,
+                    "Gasolineras Suspendidas" : feature_group_11a2d845620a47e9302c0633e43bb566,
+                },
+            };
+            let layer_control_ce617b722a9c0d297db1472229a2b003 = L.control.layers(
+                layer_control_ce617b722a9c0d297db1472229a2b003_layers.base_layers,
+                layer_control_ce617b722a9c0d297db1472229a2b003_layers.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_b7d39970417d052322ae035c044462a2);
+
+        
+</script>
+</html>
