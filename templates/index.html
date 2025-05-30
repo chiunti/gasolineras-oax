@@ -9,36 +9,57 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" />
 
     <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Página Movida</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var newHostLink = "https://gasolineras.ieepo.online";
+            var redirectButton;
+            var timerInterval;
+            var timeLeft = 6; // Segundos iniciales del timer
 
-            // Si la página se carga en el host antiguo, 
-            // muestra un enlace y oculta el contenido
-            if (window.location.hostname !== newHostLink) {
-                document.body.innerHTML = '<div style="text-align: center;'+
+            // Si la página se carga en el host antiguo, muestra un enlace y oculta el contenido
+            if (window.location.hostname !== "gasolineras.ieepo.online") { // Usa el hostname directamente para la comparación
+                document.body.innerHTML = '<div style="text-align: center;' +
                     ' margin-top: 50px;">' +
                     '<h1>Esta página se ha movido.</h1>' +
                     '<p>Por favor, visita nuestra nueva ubicación:</p>' +
                     '<p><button id="redirectButton" ' +
-                                'style="font-size: 24px; ' +
-                                        'padding: 10px 20px; ' +
-                                        'cursor: pointer; ' +
-                                        'background-color: #007bff; ' +
-                                        'color: white; ' +
-                                        'border: none; ' +
-                                        'border-radius: 5px;">' +
-                        newHostLink +
-                    '</button></p>' +
+                    'style="font-size: 24px; ' +
+                    'padding: 10px 20px; ' +
+                    'cursor: pointer; ' +
+                    'background-color: #007bff; ' +
+                    'color: white; ' +
+                    'border: none; ' +
+                    'border-radius: 5px;">' +
+                    newHostLink + ' (6)</button></p>' + // Muestra los segundos iniciales
+                    '<p id="timerMessage" style="font-size: 18px;"></p>' + // Para mostrar los segundos restantes
                     '</div>';
 
+                redirectButton = document.getElementById('redirectButton');
+                var timerMessage = document.getElementById('timerMessage');
+
+                // Función para actualizar el timer y el botón
+                function updateTimer() {
+                    timeLeft--;
+                    redirectButton.textContent = newHostLink + ' (' + timeLeft + ')';
+
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval); // Detiene el timer
+                        redirectButton.click(); // Simula el clic en el botón
+                    }
+                }
+
+                // Inicia el timer cada segundo
+                timerInterval = setInterval(updateTimer, 1000);
+
                 // Evento del clic
-                document.getElementById('redirectButton').addEventListener('click', function () {
+                redirectButton.addEventListener('click', function () {
+                    clearInterval(timerInterval); // Detiene el timer si el usuario hace clic
                     window.location.replace(newHostLink);
                 });
             }
-            // Si no es el host antiguo, la página se cargará normalmente
+            // Si no es el host antiguo, la página se cargará normalmente (tu contenido original iría aquí)
         });
     </script>
 </head>
